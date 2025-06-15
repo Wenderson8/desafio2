@@ -1,14 +1,14 @@
 const elo = ["FERRO" , "BRONZE" , "PRATA", "OURO", "DIAMANTE", "LENDÁRIO", "IMORTAL"]
  
- let resultado = level(200, 14)
+ let resultado = level(100, 14)
 
 function level (v, d){
 	let rank = v - d 
     return rank
    }
  
-  console.log("O valor do resultado é: "+resultado)
-  console.log(" Está no Elo: ") 
+  console.log("O valor do resultado é: "+resultado);
+  console.log(" Está no Elo: "+calcularElo(resultado));
     
   function calcularElo(resultado){
 	let nivel;  
@@ -30,7 +30,7 @@ function level (v, d){
     	break;
      case (resultado <= 100 ):
     	nivel = elo[5];
-	break;    
+	    break;    
      defaul: 
     	nivel = elo[6];
     }
